@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Spline Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -20,6 +20,7 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  white-space: pre-wrap;
 }
 
 .note-footer {
@@ -27,12 +28,24 @@ code {
   align-items: center;
   justify-content: space-between;
 }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dark-mode {
+  background-color: black;
+}
+.dark-mode h1 {
+  color: white;
+}
 .container {
   max-width: 960px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
+  min-height: 100vh;
 }
 
 .note.new {
@@ -65,4 +78,22 @@ textarea:focus {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.delete-icon {
+  cursor: pointer;
+}
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+.search input {
+  border: none;
+  background-color: rgb(233, 233, 233);
+}
+.search input:focus {
+  outline: none;
 }
